@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Others ###
+// application.properties
+// application.yml
