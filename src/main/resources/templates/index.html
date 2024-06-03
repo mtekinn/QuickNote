@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>QuickNote</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"> </head>
+<body>
+<h1>QuickNote</h1>
+
+<form th:action="@{/api/notes}" method="post">
+    <input type="text" name="title" placeholder="Başlık">
+    <textarea name="content" placeholder="Notunuz"></textarea>
+    <button type="submit">Not Ekle</button>
+</form>
+
+<ul>
+    <li th:each="note : ${notes}">
+        <h2 th:text="${note.title}"></h2>
+        <p th:text="${note.content}"></p>
+        <a th:href="@{/api/notes/{id}(id=${note.id})}" th:method="delete">Sil</a>
+    </li>
+</ul>
+
+<script th:src="@{/js/script.js}"></script> </body>
+</html>
