@@ -37,5 +37,9 @@ out/
 .vscode/
 
 ### Others ###
-// application.properties
-// application.yml
+application-dev.yml
+application-prod.yml
+application-test.yml
+application-local.yml
+application-*.yml
+application.yml
